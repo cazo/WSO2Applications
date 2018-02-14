@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><artifacts>
+    <artifact name="AtendeCliente" groupId="com.example.CorreioServices.endpoint" version="1.0.0" type="synapse/endpoint" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/endpoints/AtendeCliente.xml</file>
+    </artifact>
+    <artifact name="ConsultarCEP" groupId="com.example.CorreioServices.api" version="1.0.0" type="synapse/api" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/api/ConsultarCEP.xml</file>
+    </artifact>
+</artifacts>

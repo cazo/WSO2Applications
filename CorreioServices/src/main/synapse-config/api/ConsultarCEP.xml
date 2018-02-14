@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<api context="/atendeCliente" name="ConsultarCEP" xmlns="http://ws.apache.org/ns/synapse">
+    <resource methods="GET" uri-template="/consultaCEP/{cep}">
+        <inSequence>
+            <payloadFactory description="" media-type="xml">
+                <format>
+                    <cli:consultaCEP xmlns:cli="http://cliente.bean.master.sigep.bsb.correios.com.br/">
+                        <cep xmlns="">$1</cep>
+                    </cli:consultaCEP>
+                </format>
+                <args>
+                    <arg evaluator="xml" expression="get-property('uri.var.cep')"/>
+                </args>
+            </payloadFactory>
+            <send description="">
+                <endpoint key="AtendeCliente"/>
+            </send>
+        </inSequence>
+        <outSequence>
+            <payloadFactory media-type="json">
+                <format>{"bairro":$1}&#xd;
+</format>
+                <args>
+                    <arg evaluator="xml" expression="//bairro"/>
+                </args>
+            </payloadFactory>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </resource>
+</api>

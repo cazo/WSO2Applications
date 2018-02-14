@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoint name="AtendeCliente" xmlns="http://ws.apache.org/ns/synapse">
+    <wsdl port="AtendeClientePort" service="AtendeClienteService" uri="http://localhost:8090/mockAtendeCliente?wsdl"/>
+</endpoint>
