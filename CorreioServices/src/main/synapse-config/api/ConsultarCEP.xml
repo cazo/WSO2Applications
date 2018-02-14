@@ -17,13 +17,7 @@
             </send>
         </inSequence>
         <outSequence>
-            <payloadFactory media-type="json">
-                <format>{"bairro":$1}&#xd;
-</format>
-                <args>
-                    <arg evaluator="xml" expression="//bairro"/>
-                </args>
-            </payloadFactory>
+            <sequence key="SOAPtoJSON"/>
             <send/>
         </outSequence>
         <faultSequence/>
