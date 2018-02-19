@@ -8,4 +8,7 @@
     <artifact name="SOAPtoJSON" groupId="com.example.CorreioServices.sequence" version="1.0.0" type="synapse/sequence" serverRole="EnterpriseServiceBus">
         <file>src/main/synapse-config/sequences/SOAPtoJSON.xml</file>
     </artifact>
+    <artifact name="AtendeClienteProxy" groupId="com.example.CorreioServices.proxy-service" version="1.0.0" type="synapse/proxy-service" serverRole="EnterpriseServiceBus">
+        <file>src/main/synapse-config/proxy-services/AtendeClienteProxy.xml</file>
+    </artifact>
 </artifacts>

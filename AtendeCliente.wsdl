@@ -1416,7 +1416,7 @@
   <wsdl:binding name="AtendeClienteServiceSoapBinding" type="tns:AtendeCliente">
     <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
     <wsdl:operation name="fechaPlp">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="fechaPlp" style="document"/>
       <wsdl:input name="fechaPlp">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1431,7 +1431,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="validaEtiquetaPLP">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="validaEtiquetaPLPvalidaEtiquetaPLP" style="document"/>
       <wsdl:input name="validaEtiquetaPLP">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1446,7 +1446,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="registrarPedidosInformacao">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="registrarPedidosInformacao" style="document"/>
       <wsdl:input name="registrarPedidosInformacao">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1461,7 +1461,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="verificaDisponibilidadeServico">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="verificaDisponibilidadeServico" style="document"/>
       <wsdl:input name="verificaDisponibilidadeServico">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1476,7 +1476,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="bloquearObjeto">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="bloquearObjeto" style="document"/>
       <wsdl:input name="bloquearObjeto">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1491,7 +1491,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="buscaCliente">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="buscaCliente" style="document"/>
       <wsdl:input name="buscaCliente">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1506,7 +1506,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="solicitaEtiquetas">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="solicitaEtiquetas" style="document"/>
       <wsdl:input name="solicitaEtiquetas">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1521,7 +1521,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="obterMensagemRetornoPI">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="obterMensagemRetornoPI" style="document"/>
       <wsdl:input name="obterMensagemRetornoPI">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1533,7 +1533,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="consultarPedidosInformacao">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="consultarPedidosInformacao" style="document"/>
       <wsdl:input name="consultarPedidosInformacao">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1548,7 +1548,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="geraDigitoVerificadorEtiquetas">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="geraDigitoVerificadorEtiquetas" style="document"/>
       <wsdl:input name="geraDigitoVerificadorEtiquetas">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1563,7 +1563,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="fechaPlpVariosServicos">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="fechaPlpVariosServicos" style="document"/>
       <wsdl:input name="fechaPlpVariosServicos">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1578,7 +1578,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="validarPostagemReversa">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="validarPostagemReversa" style="document"/>
       <wsdl:input name="validarPostagemReversa">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1593,7 +1593,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="validaPlp">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="validaPlp" style="document"/>
       <wsdl:input name="validaPlp">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1608,7 +1608,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="cancelarPedidoScol">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="cancelarPedidoScol" style="document"/>
       <wsdl:input name="cancelarPedidoScol">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1623,7 +1623,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="obterEmbalagemLRS">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="obterEmbalagemLRS" style="document"/>
       <wsdl:input name="obterEmbalagemLRS">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1635,7 +1635,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="validarPostagemSimultanea">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="validarPostagemSimultanea" style="document"/>
       <wsdl:input name="validarPostagemSimultanea">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1650,7 +1650,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="buscaServicos">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="buscaServicos" style="document"/>
       <wsdl:input name="buscaServicos">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1665,7 +1665,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="solicitarPostagemScol">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="solicitarPostagemScol" style="document"/>
       <wsdl:input name="solicitarPostagemScol">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1680,7 +1680,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="solicitaPLP">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="solicitaPLP" style="document"/>
       <wsdl:input name="solicitaPLP">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1695,7 +1695,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="getStatusCartaoPostagem">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="getStatusCartaoPostagem" style="document"/>
       <wsdl:input name="getStatusCartaoPostagem">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1710,7 +1710,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="solicitaXmlPlp">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="solicitaXmlPlp" style="document"/>
       <wsdl:input name="solicitaXmlPlp">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1725,7 +1725,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="obterMotivosPI">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="obterMotivosPI" style="document"/>
       <wsdl:input name="obterMotivosPI">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1737,7 +1737,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="buscaContrato">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="buscaContrato" style="document"/>
       <wsdl:input name="buscaContrato">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1752,7 +1752,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="consultaSRO">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="consultaSRO" style="document"/>
       <wsdl:input name="consultaSRO">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1764,7 +1764,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="obterClienteAtualizacao">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="obterClienteAtualizacao" style="document"/>
       <wsdl:input name="obterClienteAtualizacao">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1779,7 +1779,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="integrarUsuarioScol">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="integrarUsuarioScol" style="document"/>
       <wsdl:input name="integrarUsuarioScol">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1794,7 +1794,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="atualizaPLP">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="atualizaPLP" style="document"/>
       <wsdl:input name="atualizaPLP">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1809,7 +1809,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="obterAssuntosPI">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="obterAssuntosPI" style="document"/>
       <wsdl:input name="obterAssuntosPI">
         <soap:body use="literal"/>
       </wsdl:input>
@@ -1821,7 +1821,7 @@
       </wsdl:fault>
     </wsdl:operation>
     <wsdl:operation name="consultaCEP">
-      <soap:operation soapAction="" style="document"/>
+      <soap:operation soapAction="consultaCEP" style="document"/>
       <wsdl:input name="consultaCEP">
         <soap:body use="literal"/>
       </wsdl:input>

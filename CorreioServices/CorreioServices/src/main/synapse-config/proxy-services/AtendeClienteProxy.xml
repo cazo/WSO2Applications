@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<proxy name="AtendeClienteProxy" startOnLoad="true" transports="http https" xmlns="http://ws.apache.org/ns/synapse">
+    <target>
+        <endpoint>
+            <address format="soap11" uri="http://localhost:8090/mockAtendeCliente"/>
+        </endpoint>
+        <inSequence>
+            <header name="Action" scope="default" value="urn:consultaCEP"/>
+            <log>
+                <property expression="json-eval($.)" name="JSON-Payload"/>
+            </log>
+        </inSequence>
+        <outSequence>
+            <log>
+                <property expression="json-eval($.)" name="JSON-Payload"/>
+            </log>
+            <send/>
+        </outSequence>
+        <faultSequence/>
+    </target>
+    <publishWSDL uri="http://localhost:8090/mockAtendeCliente?wsdl"/>
+    <parameter name="disableOperationValidation">true</parameter>
+</proxy>

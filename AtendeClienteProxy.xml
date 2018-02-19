@@ -1,0 +1,2770 @@
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://cliente.bean.master.sigep.bsb.correios.com.br/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" targetNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/">
+    <wsdl:types>
+        <xsd:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://cliente.bean.master.sigep.bsb.correios.com.br/">
+            <xsd:element name="VerificaSeTodosObjetosCancelados" type="tns:VerificaSeTodosObjetosCancelados"/>
+            <xsd:element name="VerificaSeTodosObjetosCanceladosResponse" type="tns:VerificaSeTodosObjetosCanceladosResponse"/>
+            <xsd:element name="atualizaPagamentoNaEntrega" type="tns:atualizaPagamentoNaEntrega"/>
+            <xsd:element name="atualizaPagamentoNaEntregaResponse" type="tns:atualizaPagamentoNaEntregaResponse"/>
+            <xsd:element name="atualizaRemessaAgrupada" type="tns:atualizaRemessaAgrupada"/>
+            <xsd:element name="atualizaRemessaAgrupadaResponse" type="tns:atualizaRemessaAgrupadaResponse"/>
+            <xsd:element name="bloquearObjeto" type="tns:bloquearObjeto"/>
+            <xsd:element name="bloquearObjetoResponse" type="tns:bloquearObjetoResponse"/>
+            <xsd:element name="buscaCliente" type="tns:buscaCliente"/>
+            <xsd:element name="buscaClienteResponse" type="tns:buscaClienteResponse"/>
+            <xsd:element name="buscaContrato" type="tns:buscaContrato"/>
+            <xsd:element name="buscaContratoResponse" type="tns:buscaContratoResponse"/>
+            <xsd:element name="buscaPagamentoEntrega" type="tns:buscaPagamentoEntrega"/>
+            <xsd:element name="buscaPagamentoEntregaResponse" type="tns:buscaPagamentoEntregaResponse"/>
+            <xsd:element name="buscaServicos" type="tns:buscaServicos"/>
+            <xsd:element name="buscaServicosAdicionaisAtivos" type="tns:buscaServicosAdicionaisAtivos"/>
+            <xsd:element name="buscaServicosAdicionaisAtivosResponse" type="tns:buscaServicosAdicionaisAtivosResponse"/>
+            <xsd:element name="buscaServicosResponse" type="tns:buscaServicosResponse"/>
+            <xsd:element name="buscaServicosValorDeclarado" type="tns:buscaServicosValorDeclarado"/>
+            <xsd:element name="buscaServicosValorDeclaradoResponse" type="tns:buscaServicosValorDeclaradoResponse"/>
+            <xsd:element name="buscaServicosXServicosAdicionais" type="tns:buscaServicosXServicosAdicionais"/>
+            <xsd:element name="buscaServicosXServicosAdicionaisResponse" type="tns:buscaServicosXServicosAdicionaisResponse"/>
+            <xsd:element name="buscaTarifaVale" type="tns:buscaTarifaVale"/>
+            <xsd:element name="buscaTarifaValeResponse" type="tns:buscaTarifaValeResponse"/>
+            <xsd:element name="calculaTarifaServico" type="tns:calculaTarifaServico"/>
+            <xsd:element name="calculaTarifaServicoResponse" type="tns:calculaTarifaServicoResponse"/>
+            <xsd:element name="cancelarObjeto" type="tns:cancelarObjeto"/>
+            <xsd:element name="cancelarObjetoResponse" type="tns:cancelarObjetoResponse"/>
+            <xsd:element name="cancelarPedidoScol" type="tns:cancelarPedidoScol"/>
+            <xsd:element name="cancelarPedidoScolResponse" type="tns:cancelarPedidoScolResponse"/>
+            <xsd:element name="consultaCEP" type="tns:consultaCEP"/>
+            <xsd:element name="consultaCEPResponse" type="tns:consultaCEPResponse"/>
+            <xsd:element name="consultaSRO" type="tns:consultaSRO"/>
+            <xsd:element name="consultaSROResponse" type="tns:consultaSROResponse"/>
+            <xsd:element name="fechaPlp" type="tns:fechaPlp"/>
+            <xsd:element name="fechaPlpResponse" type="tns:fechaPlpResponse"/>
+            <xsd:element name="fechaPlpVariosServicos" type="tns:fechaPlpVariosServicos"/>
+            <xsd:element name="fechaPlpVariosServicosResponse" type="tns:fechaPlpVariosServicosResponse"/>
+            <xsd:element name="geraDigitoVerificadorEtiquetas" type="tns:geraDigitoVerificadorEtiquetas"/>
+            <xsd:element name="geraDigitoVerificadorEtiquetasResponse" type="tns:geraDigitoVerificadorEtiquetasResponse"/>
+            <xsd:element name="getStatusCartaoPostagem" type="tns:getStatusCartaoPostagem"/>
+            <xsd:element name="getStatusCartaoPostagemResponse" type="tns:getStatusCartaoPostagemResponse"/>
+            <xsd:element name="getStatusPLP" type="tns:getStatusPLP"/>
+            <xsd:element name="getStatusPLPResponse" type="tns:getStatusPLPResponse"/>
+            <xsd:element name="integrarUsuarioScol" type="tns:integrarUsuarioScol"/>
+            <xsd:element name="integrarUsuarioScolResponse" type="tns:integrarUsuarioScolResponse"/>
+            <xsd:element name="obterClienteAtualizacao" type="tns:obterClienteAtualizacao"/>
+            <xsd:element name="obterClienteAtualizacaoResponse" type="tns:obterClienteAtualizacaoResponse"/>
+            <xsd:element name="obterEmbalagemLRS" type="tns:obterEmbalagemLRS"/>
+            <xsd:element name="obterEmbalagemLRSResponse" type="tns:obterEmbalagemLRSResponse"/>
+            <xsd:element name="solicitaEtiquetas" type="tns:solicitaEtiquetas"/>
+            <xsd:element name="solicitaEtiquetasResponse" type="tns:solicitaEtiquetasResponse"/>
+            <xsd:element name="solicitaPLP" type="tns:solicitaPLP"/>
+            <xsd:element name="solicitaPLPResponse" type="tns:solicitaPLPResponse"/>
+            <xsd:element name="solicitaXmlPlp" type="tns:solicitaXmlPlp"/>
+            <xsd:element name="solicitaXmlPlpResponse" type="tns:solicitaXmlPlpResponse"/>
+            <xsd:element name="solicitarPostagemScol" type="tns:solicitarPostagemScol"/>
+            <xsd:element name="solicitarPostagemScolResponse" type="tns:solicitarPostagemScolResponse"/>
+            <xsd:element name="validaEtiquetaPLP" type="tns:validaEtiquetaPLP"/>
+            <xsd:element name="validaEtiquetaPLPResponse" type="tns:validaEtiquetaPLPResponse"/>
+            <xsd:element name="validaPlp" type="tns:validaPlp"/>
+            <xsd:element name="validaPlpResponse" type="tns:validaPlpResponse"/>
+            <xsd:element name="validarPostagemReversa" type="tns:validarPostagemReversa"/>
+            <xsd:element name="validarPostagemReversaResponse" type="tns:validarPostagemReversaResponse"/>
+            <xsd:element name="validarPostagemSimultanea" type="tns:validarPostagemSimultanea"/>
+            <xsd:element name="validarPostagemSimultaneaResponse" type="tns:validarPostagemSimultaneaResponse"/>
+            <xsd:element name="verificaDisponibilidadeServico" type="tns:verificaDisponibilidadeServico"/>
+            <xsd:element name="verificaDisponibilidadeServicoResponse" type="tns:verificaDisponibilidadeServicoResponse"/>
+            <xsd:complexType name="buscaServicosAdicionaisAtivos">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaServicosAdicionaisAtivosResponse">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:servicoAdicionalXML"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="servicoAdicionalXML">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codigo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="descricao" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="sigla" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="fechaPlp">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="xml" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="idPlpCliente" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="cartaoPostagem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="faixaEtiquetas" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="fechaPlpResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:long"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="consultaSRO">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="listaObjetos" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="tipoConsulta" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="tipoResultado" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuarioSro" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senhaSro" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="consultaSROResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="calculaTarifaServico">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codAdministrativo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="codServico" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cepOrigem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cepDestino" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="peso" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="codFormato" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="comprimento" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="altura" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="largura" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="diametro" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="codMaoPropria" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="valorDeclarado" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="codAvisoRecebimento" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="calculaTarifaServicoResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="validaPlp">
+                <xsd:sequence>
+                    <xsd:element name="cliente" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="numero" type="xsd:string"/>
+                    <xsd:element name="diretoria" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="cartao" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="unidadePostagem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="servico" type="xsd:long"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="servicosAdicionais" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="validaPlpResponse">
+                <xsd:sequence>
+                    <xsd:element name="return" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="VerificaSeTodosObjetosCancelados">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="tns:objetoPostal"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="objetoPostal">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codigoEtiqueta" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="dataAtualizacaoCliente" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataBloqueioObjeto" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataCancelamentoEtiqueta" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataInclusao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="objetoPostalPK" type="tns:objetoPostalPK"/>
+                    <xsd:element minOccurs="0" name="plpNu" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="preListaPostagem" type="tns:preListaPostagem"/>
+                    <xsd:element minOccurs="0" name="statusBloqueio" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="statusEtiqueta" type="tns:statusObjetoPostal"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="objetoPostalPK">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codigoEtiqueta" type="xsd:string"/>
+                    <xsd:element name="plpNu" type="xsd:long"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="preListaPostagem">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="cartaoPostagem" type="tns:cartaoPostagemERP"/>
+                    <xsd:element minOccurs="0" name="dataAtualizacaoCliente" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataAtualizacaoSara" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataFechamento" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataPostagem" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataPostagemSara" type="xsd:dateTime"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="objetosPostais" nillable="true" type="tns:objetoPostal"/>
+                    <xsd:element name="plpCliente" type="xsd:long"/>
+                    <xsd:element name="plpNu" type="xsd:long"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="plpXml" nillable="true" type="xsd:unsignedShort"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="plpXmlRetorno" nillable="true" type="xsd:unsignedShort"/>
+                    <xsd:element minOccurs="0" name="status" type="tns:statusPlp"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="cartaoPostagemERP">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codigoAdministrativo" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="contratos" nillable="true" type="tns:contratoERP"/>
+                    <xsd:element minOccurs="0" name="dataAtualizacao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataVigenciaFim" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataVigenciaInicio" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="datajAtualizacao" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="datajVigenciaFim" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="datajVigenciaInicio" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="descricaoStatusCartao" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="descricaoUnidadePostagemGenerica" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="horajAtualizacao" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="numero" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="servicos" nillable="true" type="tns:servicoERP"/>
+                    <xsd:element minOccurs="0" name="statusCartaoPostagem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="statusCodigo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="unidadeGenerica" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="unidadesPostagem" nillable="true" type="tns:unidadePostagemERP"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="contratoERP">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="cartoesPostagem" nillable="true" type="tns:cartaoPostagemERP"/>
+                    <xsd:element minOccurs="0" name="cliente" type="tns:clienteERP"/>
+                    <xsd:element name="codigoCliente" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="codigoDiretoria" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="contratoPK" type="tns:contratoERPPK"/>
+                    <xsd:element minOccurs="0" name="dataAtualizacao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataAtualizacaoDDMMYYYY" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="dataVigenciaFim" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataVigenciaFimDDMMYYYY" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="dataVigenciaInicio" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataVigenciaInicioDDMMYYYY" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="datajAtualizacao" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="datajVigenciaFim" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="datajVigenciaInicio" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="descricaoDiretoriaRegional" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="descricaoStatus" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="diretoriaRegional" type="tns:unidadePostagemERP"/>
+                    <xsd:element minOccurs="0" name="horajAtualizacao" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="statusCodigo" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="clienteERP">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="cnpj" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="contratos" nillable="true" type="tns:contratoERP"/>
+                    <xsd:element minOccurs="0" name="dataAtualizacao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="datajAtualizacao" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="descricaoStatusCliente" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="gerenteConta" nillable="true" type="tns:gerenteConta"/>
+                    <xsd:element minOccurs="0" name="horajAtualizacao" type="xsd:long"/>
+                    <xsd:element name="id" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="inscricaoEstadual" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="nome" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="statusCodigo" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="gerenteConta">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="clientesVisiveis" nillable="true" type="tns:clienteERP"/>
+                    <xsd:element minOccurs="0" name="dataAtualizacao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataInclusao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataSenha" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="login" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="matricula" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="status" type="tns:statusGerente"/>
+                    <xsd:element minOccurs="0" name="tipoGerente" type="tns:tipoGerente"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="usuariosInstalacao" nillable="true" type="tns:usuarioInstalacao"/>
+                    <xsd:element minOccurs="0" name="validade" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="usuarioInstalacao">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="dataAtualizacao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataInclusao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataSenha" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="gerenteMaster" type="tns:gerenteConta"/>
+                    <xsd:element minOccurs="0" name="hashSenha" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="id" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="login" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="nome" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="parametros" nillable="true" type="tns:parametroMaster"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="status" type="tns:statusUsuario"/>
+                    <xsd:element minOccurs="0" name="validade" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="parametroMaster">
+                <xsd:sequence>
+                    <xsd:element name="prmCoParametro" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="prmTxParametro" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="prmTxValor" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="contratoERPPK">
+                <xsd:sequence>
+                    <xsd:element name="diretoria" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="numero" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="unidadePostagemERP">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="diretoriaRegional" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="endereco" type="tns:enderecoERP"/>
+                    <xsd:element minOccurs="0" name="id" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="nome" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="status" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="tipo" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="enderecoERP">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="bairro" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cep" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cidade" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="complemento" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="complemento2" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="end" type="xsd:string"/>
+                    <xsd:element name="id" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="uf" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="unidadesPostagem" nillable="true" type="tns:unidadePostagemERP"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="servicoERP">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codigo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="dataAtualizacao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="datajAtualizacao" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="descricao" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="horajAtualizacao" type="xsd:int"/>
+                    <xsd:element name="id" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="servicoSigep" type="tns:servicoSigep"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="servicosAdicionais" nillable="true" type="tns:servicoAdicionalERP"/>
+                    <xsd:element minOccurs="0" name="tipo1Codigo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="tipo1Descricao" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="tipo2Codigo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="tipo2Descricao" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="vigencia" type="tns:vigenciaERP"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="servicoSigep">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="categoriaServico" type="tns:categoriaServico"/>
+                    <xsd:element minOccurs="0" name="chancela" type="tns:chancelaMaster"/>
+                    <xsd:element minOccurs="0" name="exigeDimensoes" type="xsd:boolean"/>
+                    <xsd:element minOccurs="0" name="exigeValorCobrar" type="xsd:boolean"/>
+                    <xsd:element name="imitm" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="pagamentoEntrega" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="remessaAgrupada" type="xsd:string"/>
+                    <xsd:element name="servico" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="servicoERP" type="tns:servicoERP"/>
+                    <xsd:element minOccurs="0" name="ssiCoCodigoPostal" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="chancelaMaster">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="chancela" type="xsd:base64Binary"/>
+                    <xsd:element minOccurs="0" name="dataAtualizacao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="descricao" type="xsd:string"/>
+                    <xsd:element name="id" type="xsd:long"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="servicosSigep" nillable="true" type="tns:servicoSigep"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="servicoAdicionalERP">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codigo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="dataAtualizacao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="datajAtualizacao" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="descricao" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="horajAtualizacao" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="id" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="sigla" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="vigenciaERP">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="dataFinal" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="dataInicial" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="datajFim" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="datajIni" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="id" type="xsd:long"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="VerificaSeTodosObjetosCanceladosResponse">
+                <xsd:sequence>
+                    <xsd:element name="return" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="cancelarObjeto">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="idPlp" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="numeroEtiqueta" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="cancelarObjetoResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="atualizaPagamentoNaEntrega">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="atualizaPagamentoNaEntregaResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="obterClienteAtualizacao">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="cnpjCliente" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="obterClienteAtualizacaoResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:dateTime"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="verificaDisponibilidadeServico">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codAdministrativo" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="numeroServico" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cepOrigem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cepDestino" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="verificaDisponibilidadeServicoResponse">
+                <xsd:sequence>
+                    <xsd:element name="return" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="fechaPlpVariosServicos">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="xml" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="idPlpCliente" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="cartaoPostagem" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="listaEtiquetas" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="fechaPlpVariosServicosResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:long"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="geraDigitoVerificadorEtiquetas">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="etiquetas" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="geraDigitoVerificadorEtiquetasResponse">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="return" type="xsd:int"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="obterEmbalagemLRS">
+                <xsd:sequence/>
+            </xsd:complexType>
+            <xsd:complexType name="obterEmbalagemLRSResponse">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:embalagemLRSMaster"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="embalagemLRSMaster">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codigo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="nome" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="tipo" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="validaEtiquetaPLP">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="numeroEtiqueta" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="idPlp" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="validaEtiquetaPLPResponse">
+                <xsd:sequence>
+                    <xsd:element name="return" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaServicosValorDeclarado">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaServicosValorDeclaradoResponse">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="consultaCEP">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="cep" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="consultaCEPResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="tns:enderecoERP"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="integrarUsuarioScol">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codAdministrativo" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="integrarUsuarioScolResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="atualizaRemessaAgrupada">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="atualizaRemessaAgrupadaResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="solicitaPLP">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="idPlpMaster" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="numEtiqueta" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="solicitaPLPResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="getStatusCartaoPostagem">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="numeroCartaoPostagem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="getStatusCartaoPostagemResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="tns:statusCartao"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaTarifaVale">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codAdministrativo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="codServico" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cepOrigem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cepDestino" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="peso" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="codFormato" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="comprimento" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="altura" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="largura" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="valorDeclarado" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="servicoAdicional" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaTarifaValeResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="tns:valePostal"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="valePostal">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="cidNoCidade" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="ctcCoAadministrativo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="ctcNuContrato" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="ctcNuContratoEct" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="cvpEdBairro" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cvpEdCliente" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cvpEdComplemento" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cvpEdNumero" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cvpNoCliente" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cvpNuCep" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="descricaoErro" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="estSgEstado" type="xsd:string"/>
+                    <xsd:element name="monVarTarifaAdicional" type="xsd:int"/>
+                    <xsd:element name="monVarTarifaServico" type="xsd:int"/>
+                    <xsd:element name="monVarValorDescontos" type="xsd:int"/>
+                    <xsd:element name="monVarValorImposto" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="prsCoProdutoServico" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="pveNu" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="pveOrgNuAgencia" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="pveOrgNuAgenciaDes" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="pveOrgNuAgenciaOri" type="xsd:long"/>
+                    <xsd:element name="retornaCodErro" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="sitNoSituacao" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="tlgTxDescricao" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="vapDhTransacao" type="xsd:dateTime"/>
+                    <xsd:element minOccurs="0" name="vapNuEtiquetaEncomenda" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="vapVrCobradoEct" type="xsd:double"/>
+                    <xsd:element minOccurs="0" name="vapVrNominal" type="xsd:double"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="validarPostagemSimultanea">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codAdministrativo" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="codigoServico" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="idCartaoPostagem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cepDestinatario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="coleta" type="tns:coletaSimultanea"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="coletaSimultanea">
+                <xsd:complexContent>
+                    <xsd:extension base="tns:coleta">
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="obj" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="obs" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="coleta">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="cklist" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="descricao" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="documento" nillable="true" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="id_cliente" type="xsd:string"/>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="produto" nillable="true" type="tns:produto"/>
+                    <xsd:element minOccurs="0" name="remetente" type="tns:remetente"/>
+                    <xsd:element minOccurs="0" name="tipo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="valor_declarado" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="produto">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codigo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="qtd" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="tipo" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="remetente">
+                <xsd:complexContent>
+                    <xsd:extension base="tns:pessoa">
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="celular" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="ddd_celular" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="identificacao" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="sms" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="pessoa">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="bairro" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cep" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cidade" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="complemento" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="ddd" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="email" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="logradouro" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="nome" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="numero" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="referencia" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="telefone" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="uf" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="validarPostagemSimultaneaResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="getStatusPLP">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="arg0" type="tns:objetoPostal"/>
+                    <xsd:element minOccurs="0" name="arg1" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="getStatusPLPResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="tns:statusPlp"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaServicosXServicosAdicionais">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaServicosXServicosAdicionaisResponse">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="cancelarPedidoScol">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codAdministrativo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="idPostagem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="tipo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="cancelarPedidoScolResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="tns:retornoCancelamento"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="retornoCancelamento">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="cod_erro" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="codigo_administrativo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="data" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="hora" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="msg_erro" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="objeto_postal" type="tns:objetoSimplificado"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="objetoSimplificado">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="datahora_cancelamento" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="numero_pedido" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="status_pedido" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="bloquearObjeto">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="numeroEtiqueta" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="idPlp" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="tipoBloqueio" type="tns:tipoBloqueio"/>
+                    <xsd:element minOccurs="0" name="acao" type="tns:acao"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="bloquearObjetoResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaContrato">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="numero" type="xsd:string"/>
+                    <xsd:element name="diretoria" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaContratoResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="tns:contratoERP"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="solicitaEtiquetas">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="tipoDestinatario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="identificador" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="idServico" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="qtdEtiquetas" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="solicitaEtiquetasResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="solicitaXmlPlp">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="idPlpMaster" type="xsd:long"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="solicitaXmlPlpResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="validarPostagemReversa">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codAdministrativo" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="codigoServico" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="cepDestinatario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="idCartaoPostagem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="coleta" type="tns:coletaReversa"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="coletaReversa">
+                <xsd:complexContent>
+                    <xsd:extension base="tns:coleta">
+                        <xsd:sequence>
+                            <xsd:element minOccurs="0" name="ag" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="ar" type="xsd:int"/>
+                            <xsd:element minOccurs="0" name="cartao" type="xsd:string"/>
+                            <xsd:element minOccurs="0" name="numero" type="xsd:int"/>
+                            <xsd:element maxOccurs="unbounded" minOccurs="0" name="obj_col" nillable="true" type="tns:objeto"/>
+                            <xsd:element minOccurs="0" name="servico_adicional" type="xsd:string"/>
+                        </xsd:sequence>
+                    </xsd:extension>
+                </xsd:complexContent>
+            </xsd:complexType>
+            <xsd:complexType name="objeto">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="desc" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="entrega" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="id" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="item" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="num" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="validarPostagemReversaResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:boolean"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaCliente">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="idContrato" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="idCartaoPostagem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaClienteResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="tns:clienteERP"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaPagamentoEntrega">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="contrato" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="dataInicio" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="dataFim" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="etiqueta" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaPagamentoEntregaResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="solicitarPostagemScol">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="codAdministrativo" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="xml" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="solicitarPostagemScolResponse">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="return" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaServicos">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="idContrato" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="idCartaoPostagem" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="usuario" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="senha" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:complexType name="buscaServicosResponse">
+                <xsd:sequence>
+                    <xsd:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:servicoERP"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:simpleType name="statusGerente">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="Ativo"/>
+                    <xsd:enumeration value="Inativo"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="tipoGerente">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="GerenteConta"/>
+                    <xsd:enumeration value="GerenteContaMaster"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="statusUsuario">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="Ativo"/>
+                    <xsd:enumeration value="Inativo"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="categoriaServico">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="SEM_CATEGORIA"/>
+                    <xsd:enumeration value="PAC"/>
+                    <xsd:enumeration value="SEDEX"/>
+                    <xsd:enumeration value="CARTA_REGISTRADA"/>
+                    <xsd:enumeration value="SERVICO_COM_RESTRICAO"/>
+                    <xsd:enumeration value="REVERSO"/>
+                    <xsd:enumeration value="CARTA_CTR"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="statusPlp">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="Aberta"/>
+                    <xsd:enumeration value="Fechada"/>
+                    <xsd:enumeration value="Postada"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="statusObjetoPostal">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="EmBranco"/>
+                    <xsd:enumeration value="Postado"/>
+                    <xsd:enumeration value="Cancelado"/>
+                    <xsd:enumeration value="Estorno"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="statusCartao">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="Desconhecido"/>
+                    <xsd:enumeration value="Normal"/>
+                    <xsd:enumeration value="Suspenso"/>
+                    <xsd:enumeration value="Cancelado"/>
+                    <xsd:enumeration value="Irregular"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="tipoBloqueio">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="FRAUDE_BLOQUEIO"/>
+                    <xsd:enumeration value="EXTRAVIO_VAREJO_PRE_INDENIZADO"/>
+                    <xsd:enumeration value="EXTRAVIO_VAREJO_POS_INDENIZADO"/>
+                    <xsd:enumeration value="EXTRAVIO_CORPORATIVO"/>
+                    <xsd:enumeration value="INTERNACIONAL_LDI"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:simpleType name="acao">
+                <xsd:restriction base="xsd:string">
+                    <xsd:enumeration value="DEVOLVIDO_AO_REMETENTE"/>
+                    <xsd:enumeration value="ENCAMINHADO_PARA_REFUGO"/>
+                    <xsd:enumeration value="REINTEGRADO_E_DEVOLVIDO_AO_REMETENTE"/>
+                    <xsd:enumeration value="DESBLOQUEADO"/>
+                </xsd:restriction>
+            </xsd:simpleType>
+            <xsd:element name="SQLException" type="tns:SQLException"/>
+            <xsd:complexType name="SQLException">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="errorCode" type="xsd:int"/>
+                    <xsd:element minOccurs="0" name="sQLState" type="xsd:string"/>
+                    <xsd:element minOccurs="0" name="message" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="SigepClienteException" nillable="true" type="xsd:string"/>
+            <xsd:element name="AutenticacaoException" nillable="true" type="xsd:string"/>
+            <xsd:element name="Exception" type="tns:Exception"/>
+            <xsd:complexType name="Exception">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="message" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+            <xsd:element name="ErroMontagemRelatorio" type="tns:ErroMontagemRelatorio"/>
+            <xsd:complexType name="ErroMontagemRelatorio">
+                <xsd:sequence>
+                    <xsd:element minOccurs="0" name="message" type="xsd:string"/>
+                </xsd:sequence>
+            </xsd:complexType>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="buscaServicosAdicionaisAtivos">
+        <wsdl:part name="parameters" element="tns:buscaServicosAdicionaisAtivos"/>
+    </wsdl:message>
+    <wsdl:message name="buscaServicosAdicionaisAtivosResponse">
+        <wsdl:part name="parameters" element="tns:buscaServicosAdicionaisAtivosResponse"/>
+    </wsdl:message>
+    <wsdl:message name="SQLException">
+        <wsdl:part name="SQLException" element="tns:SQLException"/>
+    </wsdl:message>
+    <wsdl:message name="SigepClienteException">
+        <wsdl:part name="SigepClienteException" element="tns:SigepClienteException"/>
+    </wsdl:message>
+    <wsdl:message name="fechaPlp">
+        <wsdl:part name="parameters" element="tns:fechaPlp"/>
+    </wsdl:message>
+    <wsdl:message name="fechaPlpResponse">
+        <wsdl:part name="parameters" element="tns:fechaPlpResponse"/>
+    </wsdl:message>
+    <wsdl:message name="AutenticacaoException">
+        <wsdl:part name="AutenticacaoException" element="tns:AutenticacaoException"/>
+    </wsdl:message>
+    <wsdl:message name="consultaSRO">
+        <wsdl:part name="parameters" element="tns:consultaSRO"/>
+    </wsdl:message>
+    <wsdl:message name="consultaSROResponse">
+        <wsdl:part name="parameters" element="tns:consultaSROResponse"/>
+    </wsdl:message>
+    <wsdl:message name="validaPlp">
+        <wsdl:part name="parameters" element="tns:validaPlp"/>
+    </wsdl:message>
+    <wsdl:message name="validaPlpResponse">
+        <wsdl:part name="parameters" element="tns:validaPlpResponse"/>
+    </wsdl:message>
+    <wsdl:message name="calculaTarifaServico">
+        <wsdl:part name="parameters" element="tns:calculaTarifaServico"/>
+    </wsdl:message>
+    <wsdl:message name="calculaTarifaServicoResponse">
+        <wsdl:part name="parameters" element="tns:calculaTarifaServicoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="Exception">
+        <wsdl:part name="Exception" element="tns:Exception"/>
+    </wsdl:message>
+    <wsdl:message name="VerificaSeTodosObjetosCancelados">
+        <wsdl:part name="parameters" element="tns:VerificaSeTodosObjetosCancelados"/>
+    </wsdl:message>
+    <wsdl:message name="VerificaSeTodosObjetosCanceladosResponse">
+        <wsdl:part name="parameters" element="tns:VerificaSeTodosObjetosCanceladosResponse"/>
+    </wsdl:message>
+    <wsdl:message name="cancelarObjeto">
+        <wsdl:part name="parameters" element="tns:cancelarObjeto"/>
+    </wsdl:message>
+    <wsdl:message name="cancelarObjetoResponse">
+        <wsdl:part name="parameters" element="tns:cancelarObjetoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="atualizaPagamentoNaEntrega">
+        <wsdl:part name="parameters" element="tns:atualizaPagamentoNaEntrega"/>
+    </wsdl:message>
+    <wsdl:message name="atualizaPagamentoNaEntregaResponse">
+        <wsdl:part name="parameters" element="tns:atualizaPagamentoNaEntregaResponse"/>
+    </wsdl:message>
+    <wsdl:message name="obterClienteAtualizacao">
+        <wsdl:part name="parameters" element="tns:obterClienteAtualizacao"/>
+    </wsdl:message>
+    <wsdl:message name="obterClienteAtualizacaoResponse">
+        <wsdl:part name="parameters" element="tns:obterClienteAtualizacaoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="verificaDisponibilidadeServico">
+        <wsdl:part name="parameters" element="tns:verificaDisponibilidadeServico"/>
+    </wsdl:message>
+    <wsdl:message name="verificaDisponibilidadeServicoResponse">
+        <wsdl:part name="parameters" element="tns:verificaDisponibilidadeServicoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="fechaPlpVariosServicos">
+        <wsdl:part name="parameters" element="tns:fechaPlpVariosServicos"/>
+    </wsdl:message>
+    <wsdl:message name="fechaPlpVariosServicosResponse">
+        <wsdl:part name="parameters" element="tns:fechaPlpVariosServicosResponse"/>
+    </wsdl:message>
+    <wsdl:message name="geraDigitoVerificadorEtiquetas">
+        <wsdl:part name="parameters" element="tns:geraDigitoVerificadorEtiquetas"/>
+    </wsdl:message>
+    <wsdl:message name="geraDigitoVerificadorEtiquetasResponse">
+        <wsdl:part name="parameters" element="tns:geraDigitoVerificadorEtiquetasResponse"/>
+    </wsdl:message>
+    <wsdl:message name="obterEmbalagemLRS">
+        <wsdl:part name="parameters" element="tns:obterEmbalagemLRS"/>
+    </wsdl:message>
+    <wsdl:message name="obterEmbalagemLRSResponse">
+        <wsdl:part name="parameters" element="tns:obterEmbalagemLRSResponse"/>
+    </wsdl:message>
+    <wsdl:message name="validaEtiquetaPLP">
+        <wsdl:part name="parameters" element="tns:validaEtiquetaPLP"/>
+    </wsdl:message>
+    <wsdl:message name="validaEtiquetaPLPResponse">
+        <wsdl:part name="parameters" element="tns:validaEtiquetaPLPResponse"/>
+    </wsdl:message>
+    <wsdl:message name="buscaServicosValorDeclarado">
+        <wsdl:part name="parameters" element="tns:buscaServicosValorDeclarado"/>
+    </wsdl:message>
+    <wsdl:message name="buscaServicosValorDeclaradoResponse">
+        <wsdl:part name="parameters" element="tns:buscaServicosValorDeclaradoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="consultaCEP">
+        <wsdl:part name="parameters" element="tns:consultaCEP"/>
+    </wsdl:message>
+    <wsdl:message name="consultaCEPResponse">
+        <wsdl:part name="parameters" element="tns:consultaCEPResponse"/>
+    </wsdl:message>
+    <wsdl:message name="integrarUsuarioScol">
+        <wsdl:part name="parameters" element="tns:integrarUsuarioScol"/>
+    </wsdl:message>
+    <wsdl:message name="integrarUsuarioScolResponse">
+        <wsdl:part name="parameters" element="tns:integrarUsuarioScolResponse"/>
+    </wsdl:message>
+    <wsdl:message name="atualizaRemessaAgrupada">
+        <wsdl:part name="parameters" element="tns:atualizaRemessaAgrupada"/>
+    </wsdl:message>
+    <wsdl:message name="atualizaRemessaAgrupadaResponse">
+        <wsdl:part name="parameters" element="tns:atualizaRemessaAgrupadaResponse"/>
+    </wsdl:message>
+    <wsdl:message name="solicitaPLP">
+        <wsdl:part name="parameters" element="tns:solicitaPLP"/>
+    </wsdl:message>
+    <wsdl:message name="solicitaPLPResponse">
+        <wsdl:part name="parameters" element="tns:solicitaPLPResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getStatusCartaoPostagem">
+        <wsdl:part name="parameters" element="tns:getStatusCartaoPostagem"/>
+    </wsdl:message>
+    <wsdl:message name="getStatusCartaoPostagemResponse">
+        <wsdl:part name="parameters" element="tns:getStatusCartaoPostagemResponse"/>
+    </wsdl:message>
+    <wsdl:message name="buscaTarifaVale">
+        <wsdl:part name="parameters" element="tns:buscaTarifaVale"/>
+    </wsdl:message>
+    <wsdl:message name="buscaTarifaValeResponse">
+        <wsdl:part name="parameters" element="tns:buscaTarifaValeResponse"/>
+    </wsdl:message>
+    <wsdl:message name="validarPostagemSimultanea">
+        <wsdl:part name="parameters" element="tns:validarPostagemSimultanea"/>
+    </wsdl:message>
+    <wsdl:message name="validarPostagemSimultaneaResponse">
+        <wsdl:part name="parameters" element="tns:validarPostagemSimultaneaResponse"/>
+    </wsdl:message>
+    <wsdl:message name="getStatusPLP">
+        <wsdl:part name="parameters" element="tns:getStatusPLP"/>
+    </wsdl:message>
+    <wsdl:message name="getStatusPLPResponse">
+        <wsdl:part name="parameters" element="tns:getStatusPLPResponse"/>
+    </wsdl:message>
+    <wsdl:message name="buscaServicosXServicosAdicionais">
+        <wsdl:part name="parameters" element="tns:buscaServicosXServicosAdicionais"/>
+    </wsdl:message>
+    <wsdl:message name="buscaServicosXServicosAdicionaisResponse">
+        <wsdl:part name="parameters" element="tns:buscaServicosXServicosAdicionaisResponse"/>
+    </wsdl:message>
+    <wsdl:message name="cancelarPedidoScol">
+        <wsdl:part name="parameters" element="tns:cancelarPedidoScol"/>
+    </wsdl:message>
+    <wsdl:message name="cancelarPedidoScolResponse">
+        <wsdl:part name="parameters" element="tns:cancelarPedidoScolResponse"/>
+    </wsdl:message>
+    <wsdl:message name="bloquearObjeto">
+        <wsdl:part name="parameters" element="tns:bloquearObjeto"/>
+    </wsdl:message>
+    <wsdl:message name="bloquearObjetoResponse">
+        <wsdl:part name="parameters" element="tns:bloquearObjetoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="buscaContrato">
+        <wsdl:part name="parameters" element="tns:buscaContrato"/>
+    </wsdl:message>
+    <wsdl:message name="buscaContratoResponse">
+        <wsdl:part name="parameters" element="tns:buscaContratoResponse"/>
+    </wsdl:message>
+    <wsdl:message name="solicitaEtiquetas">
+        <wsdl:part name="parameters" element="tns:solicitaEtiquetas"/>
+    </wsdl:message>
+    <wsdl:message name="solicitaEtiquetasResponse">
+        <wsdl:part name="parameters" element="tns:solicitaEtiquetasResponse"/>
+    </wsdl:message>
+    <wsdl:message name="solicitaXmlPlp">
+        <wsdl:part name="parameters" element="tns:solicitaXmlPlp"/>
+    </wsdl:message>
+    <wsdl:message name="solicitaXmlPlpResponse">
+        <wsdl:part name="parameters" element="tns:solicitaXmlPlpResponse"/>
+    </wsdl:message>
+    <wsdl:message name="validarPostagemReversa">
+        <wsdl:part name="parameters" element="tns:validarPostagemReversa"/>
+    </wsdl:message>
+    <wsdl:message name="validarPostagemReversaResponse">
+        <wsdl:part name="parameters" element="tns:validarPostagemReversaResponse"/>
+    </wsdl:message>
+    <wsdl:message name="buscaCliente">
+        <wsdl:part name="parameters" element="tns:buscaCliente"/>
+    </wsdl:message>
+    <wsdl:message name="buscaClienteResponse">
+        <wsdl:part name="parameters" element="tns:buscaClienteResponse"/>
+    </wsdl:message>
+    <wsdl:message name="buscaPagamentoEntrega">
+        <wsdl:part name="parameters" element="tns:buscaPagamentoEntrega"/>
+    </wsdl:message>
+    <wsdl:message name="buscaPagamentoEntregaResponse">
+        <wsdl:part name="parameters" element="tns:buscaPagamentoEntregaResponse"/>
+    </wsdl:message>
+    <wsdl:message name="ErroMontagemRelatorio">
+        <wsdl:part name="ErroMontagemRelatorio" element="tns:ErroMontagemRelatorio"/>
+    </wsdl:message>
+    <wsdl:message name="solicitarPostagemScol">
+        <wsdl:part name="parameters" element="tns:solicitarPostagemScol"/>
+    </wsdl:message>
+    <wsdl:message name="solicitarPostagemScolResponse">
+        <wsdl:part name="parameters" element="tns:solicitarPostagemScolResponse"/>
+    </wsdl:message>
+    <wsdl:message name="buscaServicos">
+        <wsdl:part name="parameters" element="tns:buscaServicos"/>
+    </wsdl:message>
+    <wsdl:message name="buscaServicosResponse">
+        <wsdl:part name="parameters" element="tns:buscaServicosResponse"/>
+    </wsdl:message>
+    <wsdl:portType name="AtendeClienteProxyPortType">
+        <wsdl:operation name="buscaServicosAdicionaisAtivos">
+            <wsdl:input message="tns:buscaServicosAdicionaisAtivos"/>
+            <wsdl:output message="tns:buscaServicosAdicionaisAtivosResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicosAdicionaisAtivosResponse"/>
+            <wsdl:fault message="tns:SQLException" name="SQLException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicosAdicionaisAtivos/Fault/SQLException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicosAdicionaisAtivos/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="fechaPlp">
+            <wsdl:input message="tns:fechaPlp"/>
+            <wsdl:output message="tns:fechaPlpResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/fechaPlpResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/fechaPlp/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/fechaPlp/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="consultaSRO">
+            <wsdl:input message="tns:consultaSRO"/>
+            <wsdl:output message="tns:consultaSROResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/consultaSROResponse"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/consultaSRO/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="validaPlp">
+            <wsdl:input message="tns:validaPlp"/>
+            <wsdl:output message="tns:validaPlpResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validaPlpResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validaPlp/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validaPlp/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="calculaTarifaServico">
+            <wsdl:input message="tns:calculaTarifaServico"/>
+            <wsdl:output message="tns:calculaTarifaServicoResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/calculaTarifaServicoResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/calculaTarifaServico/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/calculaTarifaServico/Fault/SigepClienteException"/>
+            <wsdl:fault message="tns:Exception" name="Exception" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/calculaTarifaServico/Fault/Exception"/>
+        </wsdl:operation>
+        <wsdl:operation name="VerificaSeTodosObjetosCancelados">
+            <wsdl:input message="tns:VerificaSeTodosObjetosCancelados"/>
+            <wsdl:output message="tns:VerificaSeTodosObjetosCanceladosResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/VerificaSeTodosObjetosCanceladosResponse"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/VerificaSeTodosObjetosCancelados/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="cancelarObjeto">
+            <wsdl:input message="tns:cancelarObjeto"/>
+            <wsdl:output message="tns:cancelarObjetoResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/cancelarObjetoResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/cancelarObjeto/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/cancelarObjeto/Fault/SigepClienteException"/>
+            <wsdl:fault message="tns:Exception" name="Exception" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/cancelarObjeto/Fault/Exception"/>
+        </wsdl:operation>
+        <wsdl:operation name="atualizaPagamentoNaEntrega">
+            <wsdl:input message="tns:atualizaPagamentoNaEntrega"/>
+            <wsdl:output message="tns:atualizaPagamentoNaEntregaResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/atualizaPagamentoNaEntregaResponse"/>
+            <wsdl:fault message="tns:SQLException" name="SQLException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/atualizaPagamentoNaEntrega/Fault/SQLException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/atualizaPagamentoNaEntrega/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="obterClienteAtualizacao">
+            <wsdl:input message="tns:obterClienteAtualizacao"/>
+            <wsdl:output message="tns:obterClienteAtualizacaoResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/obterClienteAtualizacaoResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/obterClienteAtualizacao/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/obterClienteAtualizacao/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="verificaDisponibilidadeServico">
+            <wsdl:input message="tns:verificaDisponibilidadeServico"/>
+            <wsdl:output message="tns:verificaDisponibilidadeServicoResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/verificaDisponibilidadeServicoResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/verificaDisponibilidadeServico/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/verificaDisponibilidadeServico/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="fechaPlpVariosServicos">
+            <wsdl:input message="tns:fechaPlpVariosServicos"/>
+            <wsdl:output message="tns:fechaPlpVariosServicosResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/fechaPlpVariosServicosResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/fechaPlpVariosServicos/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/fechaPlpVariosServicos/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="geraDigitoVerificadorEtiquetas">
+            <wsdl:input message="tns:geraDigitoVerificadorEtiquetas"/>
+            <wsdl:output message="tns:geraDigitoVerificadorEtiquetasResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/geraDigitoVerificadorEtiquetasResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/geraDigitoVerificadorEtiquetas/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/geraDigitoVerificadorEtiquetas/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="obterEmbalagemLRS">
+            <wsdl:input message="tns:obterEmbalagemLRS"/>
+            <wsdl:output message="tns:obterEmbalagemLRSResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/obterEmbalagemLRSResponse"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/obterEmbalagemLRS/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="validaEtiquetaPLP">
+            <wsdl:input message="tns:validaEtiquetaPLP"/>
+            <wsdl:output message="tns:validaEtiquetaPLPResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validaEtiquetaPLPResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validaEtiquetaPLP/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validaEtiquetaPLP/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicosValorDeclarado">
+            <wsdl:input message="tns:buscaServicosValorDeclarado"/>
+            <wsdl:output message="tns:buscaServicosValorDeclaradoResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicosValorDeclaradoResponse"/>
+            <wsdl:fault message="tns:SQLException" name="SQLException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicosValorDeclarado/Fault/SQLException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicosValorDeclarado/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="consultaCEP">
+            <wsdl:input message="tns:consultaCEP"/>
+            <wsdl:output message="tns:consultaCEPResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/consultaCEPResponse"/>
+            <wsdl:fault message="tns:SQLException" name="SQLException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/consultaCEP/Fault/SQLException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/consultaCEP/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="integrarUsuarioScol">
+            <wsdl:input message="tns:integrarUsuarioScol"/>
+            <wsdl:output message="tns:integrarUsuarioScolResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/integrarUsuarioScolResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/integrarUsuarioScol/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/integrarUsuarioScol/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="atualizaRemessaAgrupada">
+            <wsdl:input message="tns:atualizaRemessaAgrupada"/>
+            <wsdl:output message="tns:atualizaRemessaAgrupadaResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/atualizaRemessaAgrupadaResponse"/>
+            <wsdl:fault message="tns:SQLException" name="SQLException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/atualizaRemessaAgrupada/Fault/SQLException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/atualizaRemessaAgrupada/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaPLP">
+            <wsdl:input message="tns:solicitaPLP"/>
+            <wsdl:output message="tns:solicitaPLPResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitaPLPResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitaPLP/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitaPLP/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getStatusCartaoPostagem">
+            <wsdl:input message="tns:getStatusCartaoPostagem"/>
+            <wsdl:output message="tns:getStatusCartaoPostagemResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/getStatusCartaoPostagemResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/getStatusCartaoPostagem/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/getStatusCartaoPostagem/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="buscaTarifaVale">
+            <wsdl:input message="tns:buscaTarifaVale"/>
+            <wsdl:output message="tns:buscaTarifaValeResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaTarifaValeResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaTarifaVale/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaTarifaVale/Fault/SigepClienteException"/>
+            <wsdl:fault message="tns:Exception" name="Exception" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaTarifaVale/Fault/Exception"/>
+        </wsdl:operation>
+        <wsdl:operation name="validarPostagemSimultanea">
+            <wsdl:input message="tns:validarPostagemSimultanea"/>
+            <wsdl:output message="tns:validarPostagemSimultaneaResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validarPostagemSimultaneaResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validarPostagemSimultanea/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validarPostagemSimultanea/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="getStatusPLP">
+            <wsdl:input message="tns:getStatusPLP"/>
+            <wsdl:output message="tns:getStatusPLPResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/getStatusPLPResponse"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/getStatusPLP/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicosXServicosAdicionais">
+            <wsdl:input message="tns:buscaServicosXServicosAdicionais"/>
+            <wsdl:output message="tns:buscaServicosXServicosAdicionaisResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicosXServicosAdicionaisResponse"/>
+            <wsdl:fault message="tns:SQLException" name="SQLException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicosXServicosAdicionais/Fault/SQLException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicosXServicosAdicionais/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="cancelarPedidoScol">
+            <wsdl:input message="tns:cancelarPedidoScol"/>
+            <wsdl:output message="tns:cancelarPedidoScolResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/cancelarPedidoScolResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/cancelarPedidoScol/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/cancelarPedidoScol/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="bloquearObjeto">
+            <wsdl:input message="tns:bloquearObjeto"/>
+            <wsdl:output message="tns:bloquearObjetoResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/bloquearObjetoResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/bloquearObjeto/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/bloquearObjeto/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="buscaContrato">
+            <wsdl:input message="tns:buscaContrato"/>
+            <wsdl:output message="tns:buscaContratoResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaContratoResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaContrato/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaContrato/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaEtiquetas">
+            <wsdl:input message="tns:solicitaEtiquetas"/>
+            <wsdl:output message="tns:solicitaEtiquetasResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitaEtiquetasResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitaEtiquetas/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitaEtiquetas/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaXmlPlp">
+            <wsdl:input message="tns:solicitaXmlPlp"/>
+            <wsdl:output message="tns:solicitaXmlPlpResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitaXmlPlpResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitaXmlPlp/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitaXmlPlp/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="validarPostagemReversa">
+            <wsdl:input message="tns:validarPostagemReversa"/>
+            <wsdl:output message="tns:validarPostagemReversaResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validarPostagemReversaResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validarPostagemReversa/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/validarPostagemReversa/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="buscaCliente">
+            <wsdl:input message="tns:buscaCliente"/>
+            <wsdl:output message="tns:buscaClienteResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaClienteResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaCliente/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaCliente/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="buscaPagamentoEntrega">
+            <wsdl:input message="tns:buscaPagamentoEntrega"/>
+            <wsdl:output message="tns:buscaPagamentoEntregaResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaPagamentoEntregaResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaPagamentoEntrega/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:ErroMontagemRelatorio" name="ErroMontagemRelatorio" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaPagamentoEntrega/Fault/ErroMontagemRelatorio"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaPagamentoEntrega/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="solicitarPostagemScol">
+            <wsdl:input message="tns:solicitarPostagemScol"/>
+            <wsdl:output message="tns:solicitarPostagemScolResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitarPostagemScolResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitarPostagemScol/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/solicitarPostagemScol/Fault/SigepClienteException"/>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicos">
+            <wsdl:input message="tns:buscaServicos"/>
+            <wsdl:output message="tns:buscaServicosResponse" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicosResponse"/>
+            <wsdl:fault message="tns:AutenticacaoException" name="AutenticacaoException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicos/Fault/AutenticacaoException"/>
+            <wsdl:fault message="tns:SigepClienteException" name="SigepClienteException" wsaw:Action="http://cliente.bean.master.sigep.bsb.correios.com.br/AtendeCliente/buscaServicos/Fault/SigepClienteException"/>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="AtendeClienteProxySoap11Binding" type="tns:AtendeClienteProxyPortType">
+        <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="buscaServicosAdicionaisAtivos">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="fechaPlp">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="consultaSRO">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="calculaTarifaServico">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+            <wsdl:fault name="Exception">
+                <soap:fault use="literal" name="Exception"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="validaPlp">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="VerificaSeTodosObjetosCancelados">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="cancelarObjeto">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+            <wsdl:fault name="Exception">
+                <soap:fault use="literal" name="Exception"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="atualizaPagamentoNaEntrega">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="obterClienteAtualizacao">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="verificaDisponibilidadeServico">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="fechaPlpVariosServicos">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="geraDigitoVerificadorEtiquetas">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="obterEmbalagemLRS">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="validaEtiquetaPLP">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicosValorDeclarado">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="consultaCEP">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="integrarUsuarioScol">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="atualizaRemessaAgrupada">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaPLP">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getStatusCartaoPostagem">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaTarifaVale">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+            <wsdl:fault name="Exception">
+                <soap:fault use="literal" name="Exception"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="validarPostagemSimultanea">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getStatusPLP">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicosXServicosAdicionais">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="cancelarPedidoScol">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="bloquearObjeto">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaContrato">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaEtiquetas">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaXmlPlp">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="validarPostagemReversa">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaCliente">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaPagamentoEntrega">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="ErroMontagemRelatorio">
+                <soap:fault use="literal" name="ErroMontagemRelatorio"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="solicitarPostagemScol">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicos">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="AtendeClienteProxySoap12Binding" type="tns:AtendeClienteProxyPortType">
+        <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+        <wsdl:operation name="buscaServicosAdicionaisAtivos">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap12:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="fechaPlp">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="consultaSRO">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="calculaTarifaServico">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+            <wsdl:fault name="Exception">
+                <soap12:fault use="literal" name="Exception"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="validaPlp">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="VerificaSeTodosObjetosCancelados">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="cancelarObjeto">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+            <wsdl:fault name="Exception">
+                <soap12:fault use="literal" name="Exception"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="atualizaPagamentoNaEntrega">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap12:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="obterClienteAtualizacao">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="verificaDisponibilidadeServico">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="fechaPlpVariosServicos">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="geraDigitoVerificadorEtiquetas">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="obterEmbalagemLRS">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="validaEtiquetaPLP">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicosValorDeclarado">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap12:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="consultaCEP">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap12:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="integrarUsuarioScol">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="atualizaRemessaAgrupada">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap12:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaPLP">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getStatusCartaoPostagem">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaTarifaVale">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+            <wsdl:fault name="Exception">
+                <soap12:fault use="literal" name="Exception"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="validarPostagemSimultanea">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="getStatusPLP">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicosXServicosAdicionais">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="SQLException">
+                <soap12:fault use="literal" name="SQLException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="cancelarPedidoScol">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="bloquearObjeto">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaContrato">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaEtiquetas">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaXmlPlp">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="validarPostagemReversa">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaCliente">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaPagamentoEntrega">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="ErroMontagemRelatorio">
+                <soap12:fault use="literal" name="ErroMontagemRelatorio"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="solicitarPostagemScol">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicos">
+            <soap12:operation soapAction="" style="document"/>
+            <wsdl:input>
+                <soap12:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap12:body use="literal"/>
+            </wsdl:output>
+            <wsdl:fault name="AutenticacaoException">
+                <soap12:fault use="literal" name="AutenticacaoException"/>
+            </wsdl:fault>
+            <wsdl:fault name="SigepClienteException">
+                <soap12:fault use="literal" name="SigepClienteException"/>
+            </wsdl:fault>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:binding name="AtendeClienteProxyHttpBinding" type="tns:AtendeClienteProxyPortType">
+        <http:binding verb="POST"/>
+        <wsdl:operation name="buscaServicosAdicionaisAtivos">
+            <http:operation location="buscaServicosAdicionaisAtivos"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="fechaPlp">
+            <http:operation location="fechaPlp"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="consultaSRO">
+            <http:operation location="consultaSRO"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="calculaTarifaServico">
+            <http:operation location="calculaTarifaServico"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validaPlp">
+            <http:operation location="validaPlp"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="VerificaSeTodosObjetosCancelados">
+            <http:operation location="VerificaSeTodosObjetosCancelados"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cancelarObjeto">
+            <http:operation location="cancelarObjeto"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="atualizaPagamentoNaEntrega">
+            <http:operation location="atualizaPagamentoNaEntrega"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="obterClienteAtualizacao">
+            <http:operation location="obterClienteAtualizacao"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="verificaDisponibilidadeServico">
+            <http:operation location="verificaDisponibilidadeServico"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="fechaPlpVariosServicos">
+            <http:operation location="fechaPlpVariosServicos"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="geraDigitoVerificadorEtiquetas">
+            <http:operation location="geraDigitoVerificadorEtiquetas"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="obterEmbalagemLRS">
+            <http:operation location="obterEmbalagemLRS"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validaEtiquetaPLP">
+            <http:operation location="validaEtiquetaPLP"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicosValorDeclarado">
+            <http:operation location="buscaServicosValorDeclarado"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="consultaCEP">
+            <http:operation location="consultaCEP"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="integrarUsuarioScol">
+            <http:operation location="integrarUsuarioScol"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="atualizaRemessaAgrupada">
+            <http:operation location="atualizaRemessaAgrupada"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaPLP">
+            <http:operation location="solicitaPLP"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getStatusCartaoPostagem">
+            <http:operation location="getStatusCartaoPostagem"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="buscaTarifaVale">
+            <http:operation location="buscaTarifaVale"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validarPostagemSimultanea">
+            <http:operation location="validarPostagemSimultanea"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getStatusPLP">
+            <http:operation location="getStatusPLP"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicosXServicosAdicionais">
+            <http:operation location="buscaServicosXServicosAdicionais"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="cancelarPedidoScol">
+            <http:operation location="cancelarPedidoScol"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="bloquearObjeto">
+            <http:operation location="bloquearObjeto"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="buscaContrato">
+            <http:operation location="buscaContrato"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaEtiquetas">
+            <http:operation location="solicitaEtiquetas"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="solicitaXmlPlp">
+            <http:operation location="solicitaXmlPlp"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="validarPostagemReversa">
+            <http:operation location="validarPostagemReversa"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="buscaCliente">
+            <http:operation location="buscaCliente"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="buscaPagamentoEntrega">
+            <http:operation location="buscaPagamentoEntrega"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="solicitarPostagemScol">
+            <http:operation location="solicitarPostagemScol"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="buscaServicos">
+            <http:operation location="buscaServicos"/>
+            <wsdl:input>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:input>
+            <wsdl:output>
+                <mime:content type="text/xml" part="parameters"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="AtendeClienteProxy">
+        <wsdl:port name="AtendeClienteProxyHttpSoap11Endpoint" binding="tns:AtendeClienteProxySoap11Binding">
+            <soap:address location="http://3336c3f4bbde:8280/services/AtendeClienteProxy.AtendeClienteProxyHttpSoap11Endpoint"/>
+        </wsdl:port>
+        <wsdl:port name="AtendeClienteProxyHttpsSoap11Endpoint" binding="tns:AtendeClienteProxySoap11Binding">
+            <soap:address location="https://3336c3f4bbde:8243/services/AtendeClienteProxy.AtendeClienteProxyHttpsSoap11Endpoint"/>
+        </wsdl:port>
+        <wsdl:port name="AtendeClienteProxyHttpsSoap12Endpoint" binding="tns:AtendeClienteProxySoap12Binding">
+            <soap12:address location="https://3336c3f4bbde:8243/services/AtendeClienteProxy.AtendeClienteProxyHttpsSoap12Endpoint"/>
+        </wsdl:port>
+        <wsdl:port name="AtendeClienteProxyHttpSoap12Endpoint" binding="tns:AtendeClienteProxySoap12Binding">
+            <soap12:address location="http://3336c3f4bbde:8280/services/AtendeClienteProxy.AtendeClienteProxyHttpSoap12Endpoint"/>
+        </wsdl:port>
+        <wsdl:port name="AtendeClienteProxyHttpsEndpoint" binding="tns:AtendeClienteProxyHttpBinding">
+            <http:address location="https://3336c3f4bbde:8243/services/AtendeClienteProxy.AtendeClienteProxyHttpsEndpoint"/>
+        </wsdl:port>
+        <wsdl:port name="AtendeClienteProxyHttpEndpoint" binding="tns:AtendeClienteProxyHttpBinding">
+            <http:address location="http://3336c3f4bbde:8280/services/AtendeClienteProxy.AtendeClienteProxyHttpEndpoint"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>
