@@ -12,7 +12,7 @@ Este projeto utiliza uma API REST ESB para se conectar a um serviço back-end SO
 
 ## Como criar o arquivo de deploy (*.CAR):
 
-1. Clique com o botão direito do mouse no projeto `SampleServicesCompositeApplication` e selecione a opção `Export Composite Application Project` no menu pop-up.
+1. Clique com o botão direito do mouse no projeto `CorreioServicesCompositeApplication` e selecione a opção `Export Composite Application Project` no menu pop-up.
 
 2. No seu navegador da Web, navegue até o console de gerenciamento do ESB. URL para a instalação padrão:  https://localhost:9443/carbon/.
 
@@ -23,7 +23,7 @@ Este projeto utiliza uma API REST ESB para se conectar a um serviço back-end SO
     Password: admin
    ```
 
-4. No painel de navegação esquerdo, clique em APIs no barramento de serviço (Service Bus/APIs). Aqui, você poderá ver listada a API REST criada neste projeto (HealthcareAPI). Esta API agora está pronta para receber solicitações e enviá-las para o serviço back-end. Aqui, você também poderá ver o URL de Invocação da API que deve ser usado para enviar a solicitação ao serviço.
+4. No painel de navegação esquerdo, clique em APIs no barramento de serviço (Service Bus/APIs). Aqui, você poderá ver listada a API REST criada neste projeto (ConsultarCEP). Esta API agora está pronta para receber solicitações e enviá-las para o serviço back-end. Aqui, você também poderá ver o URL de Invocação da API que deve ser usado para enviar a solicitação ao serviço.
 
     ![Deployed APIs](https://docs.wso2.com/download/attachments/85376682/Deployed%20API.png?version=1&modificationDate=1490333658000&api=v2)
 
