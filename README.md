@@ -7,7 +7,7 @@ Repositório de 'Composite Applications' para o projeto de implantação do ESB 
   - Claudius Ibn - Desenvolvedor Java Senior
   - Luiz Moraes de Lima Neto - Desenvolvedor Java Senior
 
-# Conteúdo
+# Aplicações
 Este repositório contém os seguintes WSO2 ESB Composite Applications:
 
 - [Correio Services](/CorreioServices/)
@@ -25,7 +25,7 @@ Este repositório contém os seguintes WSO2 ESB Composite Applications:
 2. Abra o Developer Studio e em seguida acesse a opção de menu `File/Import...`
 3. No diálogo de importação selecione a opção `WSO2/Existing WSO2 Projects into workspace`
 4. Informe em `Select root directory`, o diretório para onde o repositório foi baixado
-5. Marque os projetos desejados conforme abaixo, para a aplicação desejada e clique em Finalizar (Finish):
+5. Marque os projetos desejados, conforme abaixo, para a aplicação desejada e clique em Finalizar (Finish):
     - <NomeAplicaçãoWSO2>
     - <NomeAplicaçãoWSO2>CompositeApplication
     - <NomeAplicaçãoWSO2>ConnectorExporter
