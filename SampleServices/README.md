@@ -8,6 +8,11 @@ Este 'Sample', utiliza uma API REST no perfil ESB para se conectar a um serviço
   - Claudius Ibn - Desenvolvedor Java Senior
   - Luiz Moraes de Lima Neto - Desenvolvedor Java Senior
 
+
+## Como criar o arquivo de deploy (*.CAR):
+
+- Clique com o botão direito do mouse no projeto `SampleServicesCompositeApplication` e selecione a opção `Export Composite Application Project` no menu pop-up.
+
 ## Como Executar:
 
 1. No seu navegador da Web, navegue até o console de gerenciamento do ESB usando a seguinte URL:  https://localhost:9443/carbon/.
