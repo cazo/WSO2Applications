@@ -4,7 +4,6 @@ Repositório de 'Composite Applications' para o projeto de implantação do ESB 
 
 # Equipe
   - Claudio Cardozo - Arquiteto de Software
-  - Claudius Ibn - Desenvolvedor Java Senior
   - Luiz Moraes de Lima Neto - Desenvolvedor Java Senior
 
 # Aplicações

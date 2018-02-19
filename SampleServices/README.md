@@ -5,7 +5,6 @@ Este 'Sample', utiliza uma API REST no perfil ESB para se conectar a um serviço
 
 # Equipe
   - Claudio Cardozo - Arquiteto de Software
-  - Claudius Ibn - Desenvolvedor Java Senior
   - Luiz Moraes de Lima Neto - Desenvolvedor Java Senior
 
 ## Como exportar o projetos para o Developer Studio:
@@ -18,9 +17,9 @@ Este 'Sample', utiliza uma API REST no perfil ESB para se conectar a um serviço
 
 ## Como Executar:
 
-1. No seu navegador da Web, navegue até o console de gerenciamento do ESB usando a seguinte URL:  https://localhost:9443/carbon/.
+1. No seu navegador da Web, navegue até o console de gerenciamento do ESB. URL para a instalação padrão:  https://localhost:9443/carbon/.
 
-2. Faça login no console de gerenciamento usando suas credenciais. As credenciais padrão são:
+2. Faça login no console de gerenciamento usando suas credenciais. As credenciais para a instalação padrão são:
 
    ```
     Username: admin
