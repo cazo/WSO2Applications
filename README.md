@@ -29,15 +29,16 @@ Este repositório contém os seguintes WSO2 ESB Composite Applications:
 
     ![Import - Passo 02](/resources/images/import/import-passo-03.jpg)
 	
-4. Informe em `Select root directory`, o diretório para onde o repositório foi baixado
+4. Informe em `Select root directory`, o diretório para onde o repositório foi baixado. Marque os projetos desejados, conforme abaixo, para a aplicação desejada e clique em Finalizar (Finish):
 
-    ![Import - Passo 02](/resources/images/import/import-passo-04.jpg)
-	
-5. Marque os projetos desejados, conforme abaixo, para a aplicação desejada e clique em Finalizar (Finish):
     - <NomeAplicaçãoWSO2>
     - <NomeAplicaçãoWSO2>CompositeApplication
     - <NomeAplicaçãoWSO2>ConnectorExporter
     - <NomeAplicaçãoWSO2>sRegistry
+	
+    ![Import - Passo 02](/resources/images/import/import-passo-04.jpg)
+	
+5. Como resultado os projetos serão importados para o seu workspace
 
     ![Import - Passo 02](/resources/images/import/import-passo-05.jpg)
 
