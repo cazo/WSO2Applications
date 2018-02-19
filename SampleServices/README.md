@@ -8,6 +8,9 @@ Este 'Sample', utiliza uma API REST no perfil ESB para se conectar a um serviço
   - Claudius Ibn - Desenvolvedor Java Senior
   - Luiz Moraes de Lima Neto - Desenvolvedor Java Senior
 
+## Como exportar o projetos para o Developer Studio:
+
+- Siga os passos definidos na raiz do repositório [WSO2 Applications](/../)
 
 ## Como criar o arquivo de deploy (*.CAR):
 
