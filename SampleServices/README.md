@@ -12,21 +12,36 @@ Este 'Sample', utiliza uma API REST no ESB para se conectar a um serviço back-e
 
 ## Como criar o arquivo de deploy (*.CAR):
 
-1. Clique com o botão direito do mouse no projeto `SampleServicesCompositeApplication` e selecione a opção `Export Composite Application Project` no menu pop-up.
+- Clique com o botão direito do mouse no projeto `SampleServicesCompositeApplication` e selecione a opção `Export Composite Application Project` no menu pop-up.
 
-2. No seu navegador da Web, navegue até o console de gerenciamento do ESB. URL para a instalação padrão:  https://localhost:9443/carbon/.
 
-3. Faça login no console de gerenciamento usando suas credenciais. As credenciais para a instalação padrão são:
+## Como realizar o deploy
+
+1. No seu navegador da Web, navegue até o console de gerenciamento do ESB. URL para a instalação padrão:  https://localhost:9443/carbon/.
+
+2. Faça login no console de gerenciamento usando suas credenciais. As credenciais para a instalação padrão são:
 
    ```
     Username: admin
     Password: admin
    ```
 
-4. No painel de navegação esquerdo, clique em APIs no barramento de serviço (Service Bus/APIs). Aqui, você poderá ver listada a API REST criada neste projeto (HealthcareAPI). Esta API agora está pronta para receber solicitações e enviá-las para o serviço back-end. Aqui, você também poderá ver o URL de Invocação da API que deve ser usado para enviar a solicitação ao serviço.
+3. Click the Main tab on the Management Console, go to Manage -> Carbon Applications and then click Add.
+The Add Carbon Applications screen appears.
+
+4. Click Choose File, select your CAR file and click Upload.
+The CAR files that you upload are dropped to the <PRODUCT_HOME>/tmp/carbonapps/{tenant-ID}/ directory.
+
+5. Refresh the browser to see that the CAR file has been deployed.
+
+6. Click the Main tab on the Management Console, go to Manage -> Carbon Applications and then click List. If successfully deployed, the CAR file appears here.
+
+7. No painel de navegação esquerdo, clique em APIs no barramento de serviço (Service Bus/APIs). Aqui, você poderá ver listada a API REST criada neste projeto (HealthcareAPI). Esta API agora está pronta para receber solicitações e enviá-las para o serviço back-end. Aqui, você também poderá ver o URL de Invocação da API que deve ser usado para enviar a solicitação ao serviço.
 
     ![Deployed APIs](https://docs.wso2.com/download/attachments/85376682/Deployed%20API.png?version=1&modificationDate=1490333658000&api=v2)
+	
 
+	
 ## Como Executar:
 
 1. Abra um terminal de linha de comando e insira a seguinte soicitação:
