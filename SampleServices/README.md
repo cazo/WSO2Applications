@@ -10,7 +10,7 @@ Este 'Sample', utiliza uma API REST no perfil ESB para se conectar a um serviço
 
 ## Como exportar o projetos para o Developer Studio:
 
-- Siga os passos definidos na raiz do repositório [WSO2 Applications](https://github.com/moraesdelima/WSO2Applications)
+- Siga os passos definidos na raiz do repositório [WSO2 Applications](https://github.com/moraesdelima/WSO2Applications#ExportToDevStudio)
 
 ## Como criar o arquivo de deploy (*.CAR):
 

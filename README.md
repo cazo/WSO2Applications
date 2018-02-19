@@ -16,7 +16,7 @@ Este repositório contém os seguintes WSO2 ESB Composite Applications:
 - [Sample Services](/SampleServices/)
    Aplicação criada a partir do tutorial [Sending a Simple Message to a Service] disponibilizado na documentação do [WSO2 Enterprise Integrator]
    
-## Como exportar os projetos para o Developer Studio:
+## <a name="ExportToDevStudio"> Como exportar os projetos para o Developer Studio:
 
 1.  Abra um terminal de linha de comando e insira a seguinte soicitação para baixar ckonar o repositório
     ```bash
