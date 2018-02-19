@@ -10,7 +10,7 @@ Repositório de 'Composite Applications' para o projeto de implantação do ESB 
 Este repositório contém os seguintes WSO2 ESB Composite Applications:
 
 - [Correio Services](/CorreioServices/)
-   Aplicação de teste para serviço dos correios [AtendeCliente?wsdl]
+   Aplicação para teste de conceito criada a partir de um WSDL dos correios [AtendeCliente?wsdl]
 
 - [Sample Services](/SampleServices/)
    Aplicação criada a partir do tutorial [Sending a Simple Message to a Service] disponibilizado na documentação do [WSO2 Enterprise Integrator]
