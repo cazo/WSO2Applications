@@ -27,10 +27,17 @@ Este 'Sample', utiliza uma API REST no ESB para se conectar a um serviço back-e
    ```
 
 3. Clique na guia Principal no Console de Gerenciamento, vá em `Manage` -> `Carbon Applications` e clique em `Add`.
-	A tela `Add Carbon Applications` aparece.
 
+   ```
+    A tela `Add Carbon Applications` aparece.
+   ```
+   
 4. Clique em `Choose File`, selecione seu arquivo de deploy e clique em `Upload`.
-Os arquivos CAR que você carrega são descartados no diretório <PRODUCT_HOME>/tmp/carbonapps/{tenant-ID}/.
+
+   ```
+    Os arquivos CAR que você carrega são descartados no diretório <PRODUCT_HOME>/tmp/carbonapps/{tenant-ID}/.
+
+   ```
 
 5. Atualize o navegador para ver se o arquivo CAR foi implantado; OU Clique na guia Principal no Console de Gerenciamento, vá em  Manage -> Carbon Applications e clique em List. Se implementado com sucesso, o arquivo CAR aparece aqui.
 
