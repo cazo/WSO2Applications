@@ -26,17 +26,15 @@ Este 'Sample', utiliza uma API REST no ESB para se conectar a um serviço back-e
     Password: admin
    ```
 
-3. Click the Main tab on the Management Console, go to Manage -> Carbon Applications and then click Add.
-The Add Carbon Applications screen appears.
+3. Clique na guia Principal no Console de Gerenciamento, vá em `Manage` -> `Carbon Applications` e clique em `Add`.
+	A tela `Add Carbon Applications` aparece.
 
-4. Click Choose File, select your CAR file and click Upload.
-The CAR files that you upload are dropped to the <PRODUCT_HOME>/tmp/carbonapps/{tenant-ID}/ directory.
+4. Clique em `Choose File`, selecione seu arquivo de deploy e clique em `Upload`.
+Os arquivos CAR que você carrega são descartados no diretório <PRODUCT_HOME>/tmp/carbonapps/{tenant-ID}/.
 
-5. Refresh the browser to see that the CAR file has been deployed.
+5. Atualize o navegador para ver se o arquivo CAR foi implantado; OU Clique na guia Principal no Console de Gerenciamento, vá em  Manage -> Carbon Applications e clique em List. Se implementado com sucesso, o arquivo CAR aparece aqui.
 
-6. Click the Main tab on the Management Console, go to Manage -> Carbon Applications and then click List. If successfully deployed, the CAR file appears here.
-
-7. No painel de navegação esquerdo, clique em APIs no barramento de serviço (Service Bus/APIs). Aqui, você poderá ver listada a API REST criada neste projeto (HealthcareAPI). Esta API agora está pronta para receber solicitações e enviá-las para o serviço back-end. Aqui, você também poderá ver o URL de Invocação da API que deve ser usado para enviar a solicitação ao serviço.
+6. No painel de navegação esquerdo, clique em APIs no barramento de serviço (Service Bus/APIs). Aqui, você poderá ver listada a API REST criada neste projeto (HealthcareAPI). Esta API agora está pronta para receber solicitações e enviá-las para o serviço back-end. Aqui, você também poderá ver o URL de Invocação da API que deve ser usado para enviar a solicitação ao serviço.
 
     ![Deployed APIs](https://docs.wso2.com/download/attachments/85376682/Deployed%20API.png?version=1&modificationDate=1490333658000&api=v2)
 	
