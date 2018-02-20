@@ -19,24 +19,14 @@ Este projeto utiliza uma API REST ESB para se conectar a um serviço back-end SO
 1. No seu navegador da Web, navegue até o console de gerenciamento do ESB. URL para a instalação padrão:  https://localhost:9443/carbon/.
 
 2. Faça login no console de gerenciamento usando suas credenciais. As credenciais para a instalação padrão são:
-
-   ```
-    Username: admin
-    Password: admin
-   ```
+   - Username: admin
+   - Password: admin
 
 3. Clique na guia Principal no Console de Gerenciamento, vá em `Manage` -> `Carbon Applications` e clique em `Add`.
-
-   ```
-    A tela `Add Carbon Applications` aparece.
-   ```
+	- A tela `Add Carbon Applications` aparece.
 
 4. Clique em `Choose File`, selecione seu arquivo de deploy e clique em `Upload`.
-
-   ```
-    Os arquivos CAR que você carrega são descartados no diretório <PRODUCT_HOME>/tmp/carbonapps/{tenant-ID}/.
-
-   ```
+   - Os arquivos CAR que você carrega são descartados no diretório <PRODUCT_HOME>/tmp/carbonapps/{tenant-ID}/.
 
 5. Atualize o navegador para ver se o arquivo CAR foi implantado; OU Clique na guia Principal no Console de Gerenciamento, vá em  Manage -> Carbon Applications e clique em List. Se implementado com sucesso, o arquivo CAR aparece aqui.
 
