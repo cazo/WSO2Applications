@@ -6,9 +6,12 @@ Este 'Sample', utiliza uma API REST no ESB para se conectar a um serviço back-e
   - Claudio Cardozo - Arquiteto de Software
   - Luiz Moraes de Lima Neto - Desenvolvedor Java Senior
 
+## Antes de começar
+- Siga os passos indicados em [Check the availability of doctors]( https://docs.wso2.com/display/EI611/Quick+Start+Guide#QuickStartGuide-Checktheavailabilityofdoctors)
+  
 ## Como importar o projetos para o Developer Studio:
 
-- Siga os passos definidos na raiz do repositório [WSO2 Applications](https://github.com/moraesdelima/WSO2Applications#ExportToDevStudio)
+- Siga os passos indicados na raiz do repositório [WSO2 Applications](https://github.com/moraesdelima/WSO2Applications#ExportToDevStudio)
 
 ## Como criar o arquivo de deploy (*.CAR):
 
