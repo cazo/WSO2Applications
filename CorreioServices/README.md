@@ -34,5 +34,31 @@ Este projeto utiliza uma API REST ESB para se conectar a um serviço back-end SO
 
     ![Deployed APIs](https://docs.wso2.com/download/attachments/85376682/Deployed%20API.png?version=1&modificationDate=1490333658000&api=v2)
 
+## Como Executar:
+
+1. Abra um terminal de linha de comando e insira a seguinte soicitação:
+
+    ```bash
+    curl -v http://localhost:8280/atendeCliente/consultaCEP/22221010
+    ```
+
+2. Você verá a mensagem de resposta do 'HealthcareService' com uma lista de médicos disponíveis e os detalhes relevantes.
+
+    ```bash
+    {
+		"consultaCEPResponse":{
+			"return":{
+				"bairro":"Catete",
+				"cep":22221010,
+				"cidade":"Rio de Janeiro",
+				"complemento":null,
+				"complemento2":"- at├® 99999 - lado ├¡mpar",
+				"end":"Rua Bento Lisboa",
+				"id":0,
+				"uf":"RJ"
+			}
+		}
+	}
+   ```
 
 [AtendeCliente?wsdl]: <https://apps.correios.com.br/SigepMasterJPA/AtendeClienteService/AtendeCliente?wsdl>
