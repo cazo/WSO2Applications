@@ -8,7 +8,7 @@ Este projeto utiliza uma API REST ESB para se conectar a um serviço back-end SO
 
 ## Como importar o projetos para o Developer Studio:
 
-- Siga os passos definidos na raiz do repositório [WSO2 Applications](https://github.com/moraesdelima/WSO2Applications#ExportToDevStudio)
+- Siga os passos indicados na raiz do repositório [WSO2 Applications](https://github.com/moraesdelima/WSO2Applications#ExportToDevStudio)
 
 ## Como criar o arquivo de deploy (*.CAR):
 
